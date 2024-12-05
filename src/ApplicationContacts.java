@@ -37,10 +37,18 @@ public class ApplicationContacts {
                     System.out.print("Entrez un numero de telephone: ");
                     String numeroTelephone = scanner.nextLine();
 
-                    Contact contact = new Contact( nom,prenom, email, numeroTelephone);
+                    // Vérifie si le numéro existe déjà
+                    if (gestionnaire.contientContactExistant(numeroTelephone)){
+                        System.out.println("Un contact avec ce numéro existe déjà");
+                    }else {
+                        Contact contact = new Contact( nom,prenom, email, numeroTelephone);
+                        gestionnaire.ajouterContact(contact);
+                    }
+
+                    // Contact contact = new Contact( nom,prenom, email, numeroTelephone);
 
                     // GestionnaireContacts gestionnaire = new GestionnaireContacts();
-                    gestionnaire.ajouterContact(contact);
+                    // gestionnaire.ajouterContact(contact);
 
                     
                     break;

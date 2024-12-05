@@ -16,6 +16,15 @@ public class GestionnaireContacts {
         contacts.add(contact);
         System.out.println("Conctact ajouté: " + contact.getNom() + " " + contact.getPrenom());
     }
+    // Methode pour vérifier si un contact existe déjà avec se numéro
+    public boolean contientContactExistant(String numeroTelephone) {
+        for (Contact contact : contacts) {
+            if (contact.getNumeroTelephone().equals(numeroTelephone)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // Supprimer un contact par son numero de tel
     public boolean supprimerContact(String numeroTelephone) {
