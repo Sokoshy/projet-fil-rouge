@@ -46,13 +46,6 @@ public class ApplicationContacts {
                             Contact contact = new Contact( nom,prenom, email, numeroTelephone);
                             gestionnaire.ajouterContact(contact);
                         }
-
-                        // Contact contact = new Contact( nom,prenom, email, numeroTelephone);
-
-                        // GestionnaireContacts gestionnaire = new GestionnaireContacts();
-                        // gestionnaire.ajouterContact(contact);
-
-                        
                         break;
                     case  2:
                         //Supprimer un contact existant
